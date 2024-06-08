@@ -1,8 +1,7 @@
 <div align="center">
-  <br />
-    <a href="https://youtu.be/lh9XVGv6BHs?si=BquPyhI_o2f8jHqV" target="_blank">
-      <img src="https://github.com/adrianhajdin/pricewise/assets/151519281/315377f2-0307-4ac2-87e0-55e053ca094b" alt="Project Banner">
-    </a>
+  <br /> 
+  
+  ![Design preview](./banner.png)
   <br />
 
   <div>
@@ -11,12 +10,6 @@
     <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
     <img src="https://img.shields.io/badge/-MongoDB-black?style=for-the-badge&logoColor=white&logo=mongodb&color=47A248" alt="mongodb" />
   </div>
-
-  <h3 align="center">A Ecom Price Tracking Application</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -27,23 +20,10 @@
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Snippets](#snippets)
 6. 🔗 [Links](#links)
-7. 🚀 [More](#more)
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/lh9XVGv6BHs?si=BquPyhI_o2f8jHqV" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
 
 ## <a name="introduction">🤖 Introduction</a>
 
 Developed using Next.js and Bright Data's webunlocker, this e-commerce product scraping site is designed to assist users in making informed decisions. It notifies users when a product drops in price and helps competitors by alerting them when the product is out of stock, all managed through cron jobs.
-
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 27k+ members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -88,8 +68,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/adrianhajdin/pricewise.git
-cd pricewise
+git clone https://github.com/SartHak-0-Sach/Amazon_WebScraper_application
+cd Amazon_WebScraper_application
 ```
 
 **Installation**
@@ -803,25 +783,25 @@ export const formatNumber = (num: number = 0) => {
 
 Assets used in the project are [here](https://drive.google.com/file/d/1v6h993BgYX6axBoIXFbZ9HQAgqbR4PSH/view?usp=sharing)
 
-## <a name="more">🚀 More</a>
+## Continued development
 
-**Advance your skills with Next.js 14 Pro Course**
+I aim to enhance my skills in 3D graphics and animation, and further integrate advanced interactivity features in web projects to create engaging user experiences.
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning adventure. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+## Author
 
-<a href="https://jsmastery.pro/next14" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/557837ce-f612-4530-ab24-189e75133c71" alt="Project Banner">
-</a>
+<b><strong>Sarthak Sachdev</strong></b>
+- Website - [Sarthak Sachdev](https://itsmesarthak.netlify.app/)
+- LeetCode - [@sarthak_sachdev](https://leetcode.com/u/sarthak_sachdev/)
+- Twitter - [@sarthak_sach69](https://www.twitter.com/sarthak_sach69)
 
-<br />
-<br />
+## Acknowledgments
 
-**Accelerate your professional journey with the Expert Training program**
+Special thanks to the vast knowledge base available on YouTube and Stack Overflow, where I learned many of the concepts integrated in this project and got my doubts cleared.
 
-And if you're hungry for more than just a course and want to understand how we learn and tackle tech challenges, hop into our personalized masterclass. We cover best practices, different web skills, and offer mentorship to boost your confidence. Let's learn and grow together!
+## Got feedback for me?
 
-<a href="https://www.jsmastery.pro/masterclass" target="_blank">
-<img src="https://github.com/sujatagunale/EasyRead/assets/151519281/fed352ad-f27b-400d-9b8f-c7fe628acb84" alt="Project Banner">
-</a>
+I love receiving feedback! I am always looking to improve my code and take up new innovative ideas to work upon. So if you have anything you'd like to mention, please email 'hi' at saarsaach30[at]gmail[dot]com.
 
-#
+If you liked this project, make sure to spread the word and share it with all your friends.
+
+**Happy Coding!** ✨🎖️
