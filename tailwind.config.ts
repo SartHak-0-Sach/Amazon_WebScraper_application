@@ -10,8 +10,8 @@ module.exports = {
       colors: {
         primary: {
           DEFAULT: "#E43030",
-          "orange": "#D48D3B",
-          "green": "#3E9242"
+          orange: "#D48D3B",
+          green: "#3E9242",
         },
         secondary: "#282828",
         "gray-200": "#EAECF0",
@@ -29,15 +29,15 @@ module.exports = {
         xs: "0px 1px 2px 0px rgba(16, 24, 40, 0.05)",
       },
       maxWidth: {
-        "10xl": '1440px'
+        "10xl": "1440px",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        spaceGrotesk: ['Space Grotesk', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        spaceGrotesk: ["Space Grotesk", "sans-serif"],
       },
       borderRadius: {
-        10: "10px"
-      }
+        10: "10px",
+      },
     },
   },
   plugins: [],

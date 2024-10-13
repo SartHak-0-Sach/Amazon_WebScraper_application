@@ -1,7 +1,7 @@
 import Modal from "@/components/Modal";
 import PriceInfoCard from "@/components/PriceInfoCard";
 import ProductCard from "@/components/ProductCard";
-import { getProductById, getSimilarProducts } from "@/lib/actions"
+import { getProductById, getSimilarProducts } from "@/lib/actions";
 import { formatNumber } from "@/lib/utils";
 import { Product } from "@/types";
 import Image from "next/image";
@@ -9,13 +9,13 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 type Props = {
-  params: { id: string }
-}
+  params: { id: string };
+};
 
 const ProductDetails = async ({ params: { id } }: Props) => {
   const product: Product = await getProductById(id);
 
-  if(!product) redirect('/')
+  if (!product) redirect("/");
 
   const similarProducts = await getSimilarProducts(id);
 
@@ -23,7 +23,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
     <div className="product-container">
       <div className="flex gap-28 xl:flex-row flex-col">
         <div className="product-image">
-          <Image 
+          <Image
             src={product.image}
             alt={product.title}
             width={580}
@@ -50,7 +50,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
 
             <div className="flex items-center gap-3">
               <div className="product-hearts">
-                <Image 
+                <Image
                   src="/assets/icons/red-heart.svg"
                   alt="heart"
                   width={20}
@@ -63,7 +63,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
               </div>
 
               <div className="p-2 bg-white-200 rounded-10">
-                <Image 
+                <Image
                   src="/assets/icons/bookmark.svg"
                   alt="bookmark"
                   width={20}
@@ -72,7 +72,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
               </div>
 
               <div className="p-2 bg-white-200 rounded-10">
-                <Image 
+                <Image
                   src="/assets/icons/share.svg"
                   alt="share"
                   width={20}
@@ -95,19 +95,19 @@ const ProductDetails = async ({ params: { id } }: Props) => {
             <div className="flex flex-col gap-4">
               <div className="flex gap-3">
                 <div className="product-stars">
-                  <Image 
+                  <Image
                     src="/assets/icons/star.svg"
                     alt="star"
                     width={16}
                     height={16}
                   />
                   <p className="text-sm text-primary-orange font-semibold">
-                    {product.stars || '25'}
+                    {product.stars || "25"}
                   </p>
                 </div>
 
                 <div className="product-reviews">
-                  <Image 
+                  <Image
                     src="/assets/icons/comment.svg"
                     alt="comment"
                     width={16}
@@ -120,33 +120,41 @@ const ProductDetails = async ({ params: { id } }: Props) => {
               </div>
 
               <p className="text-sm text-black opacity-50">
-                <span className="text-primary-green font-semibold">93% </span> of
-                buyers have recommeded this.
+                <span className="text-primary-green font-semibold">93% </span>{" "}
+                of buyers have recommeded this.
               </p>
             </div>
           </div>
 
           <div className="my-7 flex flex-col gap-5">
             <div className="flex gap-5 flex-wrap">
-              <PriceInfoCard 
+              <PriceInfoCard
                 title="Current Price"
                 iconSrc="/assets/icons/price-tag.svg"
-                value={`${product.currency} ${formatNumber(product.currentPrice)}`}
+                value={`${product.currency} ${formatNumber(
+                  product.currentPrice
+                )}`}
               />
-              <PriceInfoCard 
+              <PriceInfoCard
                 title="Average Price"
                 iconSrc="/assets/icons/chart.svg"
-                value={`${product.currency} ${formatNumber(product.averagePrice)}`}
+                value={`${product.currency} ${formatNumber(
+                  product.averagePrice
+                )}`}
               />
-              <PriceInfoCard 
+              <PriceInfoCard
                 title="Highest Price"
                 iconSrc="/assets/icons/arrow-up.svg"
-                value={`${product.currency} ${formatNumber(product.highestPrice)}`}
+                value={`${product.currency} ${formatNumber(
+                  product.highestPrice
+                )}`}
               />
-              <PriceInfoCard 
+              <PriceInfoCard
                 title="Lowest Price"
                 iconSrc="/assets/icons/arrow-down.svg"
-                value={`${product.currency} ${formatNumber(product.lowestPrice)}`}
+                value={`${product.currency} ${formatNumber(
+                  product.lowestPrice
+                )}`}
               />
             </div>
           </div>
@@ -162,12 +170,12 @@ const ProductDetails = async ({ params: { id } }: Props) => {
           </h3>
 
           <div className="flex flex-col gap-4">
-            {product?.description?.split('\n')}
+            {product?.description?.split("\n")}
           </div>
         </div>
 
         <button className="btn w-fit mx-auto flex items-center justify-center gap-3 min-w-[200px]">
-          <Image 
+          <Image
             src="/assets/icons/bag.svg"
             alt="check"
             width={22}
@@ -192,7 +200,7 @@ const ProductDetails = async ({ params: { id } }: Props) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

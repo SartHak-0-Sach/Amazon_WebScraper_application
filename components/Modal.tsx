@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { FormEvent, Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import Image from 'next/image'
-import { addUserEmailToProduct } from '@/lib/actions'
+import { FormEvent, Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
+import { addUserEmailToProduct } from "@/lib/actions";
 
 interface Props {
-  productId: string
+  productId: string;
 }
 
 const Modal = ({ productId }: Props) => {
-  let [isOpen, setIsOpen] = useState(true)
+  let [isOpen, setIsOpen] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,10 +20,10 @@ const Modal = ({ productId }: Props) => {
 
     await addUserEmailToProduct(productId, email);
 
-    setIsSubmitting(false)
-    setEmail('')
-    closeModal()
-  }
+    setIsSubmitting(false);
+    setEmail("");
+    closeModal();
+  };
 
   const openModal = () => setIsOpen(true);
 
@@ -47,14 +47,14 @@ const Modal = ({ productId }: Props) => {
               leaveFrom="opacity-100"
               leaveTo="opacity-0"
             >
-              <Dialog.Overlay className="fixed inset-0" /> 
+              <Dialog.Overlay className="fixed inset-0" />
             </Transition.Child>
 
             <span
               className="inline-block h-screen align-middle"
               aria-hidden="true"
             />
-            
+
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -68,7 +68,7 @@ const Modal = ({ productId }: Props) => {
                 <div className="flex flex-col">
                   <div className="flex justify-between">
                     <div className="p-3 border border-gray-200 rounded-10">
-                      <Image 
+                      <Image
                         src="/assets/icons/logo.svg"
                         alt="logo"
                         width={28}
@@ -76,7 +76,7 @@ const Modal = ({ productId }: Props) => {
                       />
                     </div>
 
-                    <Image 
+                    <Image
                       src="/assets/icons/x-close.svg"
                       alt="close"
                       width={24}
@@ -87,7 +87,8 @@ const Modal = ({ productId }: Props) => {
                   </div>
 
                   <h4 className="dialog-head_text">
-                    Stay updated with product pricing alerts right in your inbox!
+                    Stay updated with product pricing alerts right in your
+                    inbox!
                   </h4>
 
                   <p className="text-sm text-gray-600 mt-2">
@@ -96,32 +97,33 @@ const Modal = ({ productId }: Props) => {
                 </div>
 
                 <form className="flex flex-col mt-5" onSubmit={handleSubmit}>
-                  <label htmlFor="email" className="text-sm font-medium text-gray-700">
+                  <label
+                    htmlFor="email"
+                    className="text-sm font-medium text-gray-700"
+                  >
                     Email address
                   </label>
                   <div className="dialog-input_container">
-                    <Image 
+                    <Image
                       src="/assets/icons/mail.svg"
-                      alt='mail'
+                      alt="mail"
                       width={18}
                       height={18}
                     />
 
-                    <input 
+                    <input
                       required
                       type="email"
                       id="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Enter your email address"
-                      className='dialog-input'
+                      className="dialog-input"
                     />
                   </div>
 
-                  <button type="submit"
-                    className="dialog-btn"
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Track'}
+                  <button type="submit" className="dialog-btn">
+                    {isSubmitting ? "Submitting..." : "Track"}
                   </button>
                 </form>
               </div>
@@ -130,7 +132,7 @@ const Modal = ({ productId }: Props) => {
         </Dialog>
       </Transition>
     </>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;
